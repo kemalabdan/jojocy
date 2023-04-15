@@ -5,8 +5,7 @@ describe('Searchbox test', function() {
         cy.visit('https://www.service.nsw.gov.au/')
     })
     it('Should type into searchbox and submit', () => {
-        cy.get('#search-bar-vna1rg3w').type('Apply for a number plate{enter}')
-        cy.get('h2').should('contain.text', 'Apply for a number plate')
+        cy.contains('Search').type('Apply for a number plate{enter}')
         cy.get('h2').should('contain.text', 'Apply for a number plate')
         cy.get('a').should('contain.text', 'number plates')
     });
